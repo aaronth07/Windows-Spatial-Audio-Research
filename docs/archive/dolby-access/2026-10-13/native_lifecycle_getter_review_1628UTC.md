@@ -1,8 +1,10 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Lifecycle getter deadlines
 
-Dot requested one safety change after reviewing the four-run runner and comparator: bound endpoint, spatial-format and effect-property getter subprocesses. The revised runner SHA-256 is `<private-artifact-digest>`. The reviewed comparator remains `<private-artifact-digest>`. C++, C# and the native executable are unchanged. No live lifecycle operation has run and no new runtime release file exists.
+prior coordinator requested one safety change after reviewing the four-run runner and comparator: bound endpoint, spatial-format and effect-property getter subprocesses. The revised runner SHA-256 is `<private-artifact-digest>`. The reviewed comparator remains `<private-artifact-digest>`. C++, C# and the native executable are unchanged. No live lifecycle operation has run and no new runtime release file exists.
 
 `native_lifecycle_getter_deadlines_20261013.diff` contains only this runner revision against the preserved reviewed hash `<private-artifact-digest>`. The updated five-artifact record is `native_lifecycle_getter_review_20261013.json`, still `authorized: false`. The accepted four-run sequence, fixed property/candidate, endpoint guards, BATs and restoration are unchanged.
 
@@ -16,4 +18,4 @@ Evidence is `native_lifecycle_getter_timeout_tests_20261013.json`, tied to the r
 
 The existing 26 state/callback cases and 14 default/cleanup cases passed against the revised source. AST/local input validation and the missing-release gate check passed: no new operation directory or live getter/BAT/stream/property call, with historical getter files unchanged. Comparator code was rehashed and left untouched.
 
-The getter deadlines reduce subprocess-hang exposure. Controller-side COM property calls remain unbounded, as does the inherited backup-preparation subprocess before the first mutation. A hard three-minute transaction bound is therefore not claimed. No whole-controller termination is used because it could bypass restoration. The proposed exclusive window remains three minutes subject to these stated limits and Dot's release decision.
+The getter deadlines reduce subprocess-hang exposure. Controller-side COM property calls remain unbounded, as does the inherited backup-preparation subprocess before the first mutation. A hard three-minute transaction bound is therefore not claimed. No whole-controller termination is used because it could bypass restoration. The proposed exclusive window remains three minutes subject to these stated limits and prior coordinator's release decision.

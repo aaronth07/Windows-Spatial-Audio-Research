@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 DTS native SOFA import is verified for the owned 4,096-sample candidate. Windows Sonic import and Dolby room control remain active research projects.
@@ -14,4 +16,4 @@ Primary reviewed the new converter, writer transaction, explicit capture adaptat
 
 Next: retain a practical documented DTS CLI workflow around the verified profile; perform the isolated Dolby room-output-tap comparison with exact current personalization restoration; continue Sonic's explicit-HRIR consumers and service/engine cache mechanism. Dolby coefficient synthesis and ear-routing work remains in its separate log and must not be replaced with an unverified modeled SOFA.
 
-The user approved the bounded DTS test and then explicitly stated: “Yes you may change what you wish on stereo convolver. I am setting that to the default device now.” This authorization applies to subsequent selected virtual endpoint audio-configuration experiments within these projects; retain exact proposed fields, backups and restoration, and do not add an absent agent or Dot response as a gate. Driver, service and security changes remain outside the proposed work. The fresh test snapshot confirmed all playback default roles were selected virtual endpoint.
+The user approved the bounded DTS test and then explicitly stated: “Yes you may change what you wish on stereo convolver. I am setting that to the default device now.” This authorization applies to subsequent selected virtual endpoint audio-configuration experiments within these projects; retain exact proposed fields, backups and restoration, and do not add an absent agent or prior coordinator response as a gate. Driver, service and security changes remain outside the proposed work. The fresh test snapshot confirmed all playback default roles were selected virtual endpoint.

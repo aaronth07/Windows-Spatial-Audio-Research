@@ -1,8 +1,10 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Checkpoint — 2026-10-13 16:30 UTC
 
-The six-run native Spatial Sound transaction remains the only executed native capture sequence; its candidate result and verified property restoration are unchanged. The separate four-run OFF/ON sequence remains unexecuted, and its runtime release record is absent. Dot is reviewing the revised sources.
+The six-run native Spatial Sound transaction remains the only executed native capture sequence; its candidate result and verified property restoration are unchanged. The separate four-run OFF/ON sequence remains unexecuted, and its runtime release record is absent. prior coordinator is reviewing the revised sources.
 
 The getter-deadline runner is SHA-256 `<private-artifact-digest>`, revised from the previously reviewed runner hash `<private-artifact-digest>`. Comparator hash remains `<private-artifact-digest>`. The C++, C# and native executable are unchanged.
 

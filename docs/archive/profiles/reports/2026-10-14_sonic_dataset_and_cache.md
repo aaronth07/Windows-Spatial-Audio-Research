@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 The installed Sonic-related data path is more concrete, but a system-wide custom Sonic listener profile remains unverified. This pass used inert copies and REA/Ghidra only. No registry value, endpoint, provider selection, service, driver or audio stream changed.

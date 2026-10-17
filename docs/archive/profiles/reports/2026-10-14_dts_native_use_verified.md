@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 Your SOFA-derived HRTF was applied and used by DTS Headphone:X through native Windows Spatial Sound dynamic objects. The bounded test completed six captures: original twice, converted twice, restored original twice. Dolby Atmos for Headphones and the saved endpoint configuration were restored afterward.

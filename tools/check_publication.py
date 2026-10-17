@@ -9,7 +9,7 @@ def check():
     failures=[]
     for relative in files:
         p=ROOT/relative
-        if p.suffix.lower() not in SUFFIXES and p.name not in {'.gitignore','LICENSE'}:
+        if p.suffix.lower() not in SUFFIXES and p.name not in {'.gitignore','.gitattributes','LICENSE'}:
             failures.append(str(relative)+': unexpected file type');continue
         text=p.read_text(encoding='utf-8-sig')
         # Construct patterns so this checker can itself be published.

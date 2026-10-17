@@ -1,8 +1,10 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Property-test dependencies and rollback — 2026-10-13 13:22 UTC
 
-The exact one-property test remains approved by <identity-removed> and paused for Dot's evidence review. Fresh backups completed at 13:06:30 UTC after <identity-removed> closed Access and turned Atmos off. This assessment does not authorize a hive import, app-file replacement, cache synthesis, account change, or broader registry write.
+The exact one-property test remains approved by <identity-removed> and paused for prior coordinator's evidence review. Fresh backups completed at 13:06:30 UTC after <identity-removed> closed Access and turned Atmos off. This assessment does not authorize a hive import, app-file replacement, cache synthesis, account change, or broader registry write.
 
 The first useful live result is a bounded API SetValue/Commit, readback, immediate restore and readback while Access is closed and Atmos is off. It can establish persisted property access. It cannot establish native coefficient loading or rendering; those require later controlled validation. No object probe or unrelated audio harness is needed for this first result.
 
@@ -34,10 +36,10 @@ No justified hive edit has been identified. Inventing PHRTF keys, replacing Inst
 ## Safest options
 
 1. **Recommended:** review the fresh manifest, then perform only the approved property set/readback/restore with Access closed and Atmos off. Fresh API/registry baseline must match 14/22 bytes, all six User values must be backed up, and defaults must remain selected virtual endpoint. No sound or spatial enablement is included. Any access denial stops without elevation or another writer.
-2. Continue cache-schema tracing offline if Dot wants an app-managed import path before any write. Exact typed member mapping/order and PHRTF identity/config fields remain the blocker. This does not require editing the supplied hives.
+2. Continue cache-schema tracing offline if prior coordinator wants an app-managed import path before any write. Exact typed member mapping/order and PHRTF identity/config fields remain the blocker. This does not require editing the supplied hives.
 3. After property persistence is established, separately review native load/object-rendering and Access persistence tests. <identity-removed>'s existing enable/disable BATs are the selected spatial switcher; validate their accepted subtype by getter readback and restore OFF. SoundVolumeView 2.36 predates the official 2.48 Windows 11 25H2 fix, so compatibility remains untested. No replacement/helper change is implied.
 
-Rollback for option 1 is the exact fresh 14-byte baseline API payload using the same property store, followed by Commit and independent API/registry hash comparison. Verify all six User values, app files, defaults and zero spatial subtype. An exception after an attempted SetValue must still trigger normal API restoration. If restoration is denied or readback mismatches, retain the evidence and request Dot's assistance; do not import a broad context export, full registry reference or hive. The private scoped export is evidence and contingency material, not an approved broad restore operation.
+Rollback for option 1 is the exact fresh 14-byte baseline API payload using the same property store, followed by Commit and independent API/registry hash comparison. Verify all six User values, app files, defaults and zero spatial subtype. An exception after an attempted SetValue must still trigger normal API restoration. If restoration is denied or readback mismatches, retain the evidence and request prior coordinator's assistance; do not import a broad context export, full registry reference or hive. The private scoped export is evidence and contingency material, not an approved broad restore operation.
 
 The candidate API is 62,791 bytes, SHA-256 `<private-artifact-digest>`. Its owned array has 15,691 total int32 entries including two outer header words; the 15,689 remaining words comprise 15,678 core plus 11 trailer. Selected framing/checksum ports pass the extended-trailer path; native DLL acceptance remains unperformed.
 

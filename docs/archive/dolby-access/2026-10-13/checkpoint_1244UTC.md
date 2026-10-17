@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Consumer PHRTF checkpoint — 2026-10-13 12:44 UTC
@@ -10,7 +12,7 @@ Fresh backup preparation created `<local-path>`. The partial directory contains 
 
 The endpoint/context/property target is `Endpoint {<identifier-removed>}`, context `{45da5c30-2837-4ac4-b1e2-50acc3865974}`, property `{1b4dab55-b1fb-4d8c-8317-f2d4a96efbb8},1`. The writable interface probe made no `SetValue`, `Commit`, registry write, stream activation, playback, or capture call. No rollback is needed because no live value changed.
 
-**Current decision:** stop the approved property write until a consistent verified backup is available or the coordinator reviews whether the locked settings file is a required dependency. Do not ask <identity-removed> while AFK, bypass the lock, close or kill Dolby Access, or broaden registry authorization. Future coordination is through dot or Luna as <identity-removed> requested. No app/settings state change occurred.
+**Current decision:** stop the approved property write until a consistent verified backup is available or the coordinator reviews whether the locked settings file is a required dependency. Historical constraint: no lock bypass or broader state change was performed. No app/settings state change occurred.
 
 Exact paths:
 

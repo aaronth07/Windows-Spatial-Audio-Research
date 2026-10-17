@@ -1,8 +1,10 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Native-object PHRTF validation proposal — 2026-10-13 13:55 UTC
 
-The property-only test passed and the original property is restored. This next sequence is implemented and tested offline; it has not enabled Atmos, opened a stream, played or captured sound. Dot's release is required before its runtime command. The desktop remains available to EQ APO's separately authorized screenshot task.
+The property-only test passed and the original property is restored. This next sequence is implemented and tested offline; it has not enabled Atmos, opened a stream, played or captured sound. prior coordinator's release is required before its runtime command. The desktop remains available to EQ APO's separately authorized screenshot task.
 
 ## Exact source and test
 
@@ -26,7 +28,7 @@ Each run sends 10 seconds of data and records an additional 0.5 seconds of silen
 
 ## Runtime sequence and rollback
 
-`scripts/run_native_load_validation.ps1` defaults to local validation only. Runtime command, after Dot releases the five exact source/executable hashes in `native_load_runtime_review_20261013.json`:
+`scripts/run_native_load_validation.ps1` defaults to local validation only. Runtime command, after prior coordinator releases the five exact source/executable hashes in `native_load_runtime_review_20261013.json`:
 
 Historical workspace command omitted; use the public [example guide](../../../../examples/README.md).
 
@@ -34,7 +36,7 @@ Historical workspace command omitted; use the public [example guide](../../../..
 2. Verify the existing BAT and SoundVolumeView hashes, then invoke `Enable spatial sound (Dolby Atmos for Headphones).bat` from `<local-path>`. Require active/default subtype `{<identifier-removed>}` by getters, same endpoint/formats, unchanged baseline/context/app files and DAFM VT_EMPTY. BAT output alone is insufficient. Run the helper's `--capabilities-approved` mode, which activates only the spatial client and queries formats/object capacity, without creating a stream.
 3. Capture baseline1 and baseline2 on the named endpoints. Re-read baseline/context/app files and spatial state. Set/commit only the same approved 62,791-byte candidate through the already tested property-store API; require exact API/registry readback and unchanged other User values.
 4. While that property is present, capture candidate1 and candidate2. The C# transaction runner invokes the bounded capture callback inside try/finally. Any callback failure still attempts the exact fresh property restore and Commit. Require API14/REG22 baseline hashes and all six User values after restore before any further capture.
-5. Capture restored1 and restored2 with Dolby still enabled, then invoke `Disable spatial sound.bat` in the outer finally. Immediately before BOTH enable and disable BAT launch, freshly read MMDevice console/multimedia defaults and enforce the exact approved ID. If either differs or cannot be read, do not launch that BAT against a new device. Record the phase, exact observed IDs and `cleanup_incomplete=true` for blocked OFF cleanup. The unchanged C# inner finally attempts the fixed-property restore before its default checks; outer fixed-context/app backup verification runs independently of the spatial/default check. Require zero active/default subtype, baseline property/context/app files, unchanged defaults and formats before reporting complete cleanup. Any failure ends further testing and reports the actual HRESULT/state to Dot; no alternate writer, elevation, hive import, full registry import or format reset is attempted.
+5. Capture restored1 and restored2 with Dolby still enabled, then invoke `Disable spatial sound.bat` in the outer finally. Immediately before BOTH enable and disable BAT launch, freshly read MMDevice console/multimedia defaults and enforce the exact approved ID. If either differs or cannot be read, do not launch that BAT against a new device. Record the phase, exact observed IDs and `cleanup_incomplete=true` for blocked OFF cleanup. The unchanged C# inner finally attempts the fixed-property restore before its default checks; outer fixed-context/app backup verification runs independently of the spatial/default check. Require zero active/default subtype, baseline property/context/app files, unchanged defaults and formats before reporting complete cleanup. Any failure ends further testing and reports the actual HRESULT/state to prior coordinator; no alternate writer, elevation, hive import, full registry import or format reset is attempted.
 
 Actual OS read-only query: Windows 11 Pro, version 10.0.26200. SoundVolumeView is the existing 2.36 executable, SHA-256 `<private-artifact-digest>`; the official change history documents a later 2.48 fix for Windows 11 25H2. Its compatibility here is untested. Failed enable/readback aborts before stream creation and attempts the selected OFF rollback; it is not permission to update or replace the tool.
 

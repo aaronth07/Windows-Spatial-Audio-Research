@@ -1,10 +1,12 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Checkpoint — 2026-10-13 13:28 UTC
 
 ## Result
 
-Dot reviewed the previously approved exact endpoint-property-only test. At 13:27:59 UTC the candidate API payload was written, committed, and read back; the original baseline was then written back, committed, and verified. All API activation/open/set/commit and restore set/commit HRESULTs were S_OK. The exact baseline was restored.
+prior coordinator reviewed the previously approved exact endpoint-property-only test. At 13:27:59 UTC the candidate API payload was written, committed, and read back; the original baseline was then written back, committed, and verified. All API activation/open/set/commit and restore set/commit HRESULTs were S_OK. The exact baseline was restored.
 
 Target:
 - Endpoint: {<identifier-removed>}
@@ -24,7 +26,7 @@ Fresh backup was complete at 2026-10-13T13:27:59.6392372Z: private/native_proper
 
 No audio stream, playback, capture, spatial command, app launch, UI change, or other registry edit occurred. Post-restore checks verified the baseline, all six context values, app files, defaults and OFF state. This result establishes writable property persistence and immediate restoration only. It does not establish native PHRTF loading, personalized processing, Access integration, or restart persistence.
 
-The exact approved property-only stage is complete. Approval for any other registry key/value remains separate; full registry import is not authorized. The 13:22 dependency_rollback_assessment_1322UTC.md was written while Dot review was still pending; its wording is historical and superseded by the later review and result.
+The exact approved property-only stage is complete. Approval for any other registry key/value remains separate; full registry import is not authorized. The 13:22 dependency_rollback_assessment_1322UTC.md was written while prior coordinator review was still pending; its wording is historical and superseded by the later review and result.
 
 Static investigation remains active. REA DSP dependency evidence is exported and the session is closed: private/rea_dsp_dependencies_20261013.json and private/dsp_dependencies_20261013.rea-snapshot.json. The remaining static digest/cache-schema question is separate from this successful property round trip.
 

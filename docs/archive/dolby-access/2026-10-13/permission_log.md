@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Settings authorization log — 2026-10-13
@@ -13,7 +15,7 @@
 - The candidate API value (62,791 bytes; SHA-256 <private-artifact-digest>) was set, committed, and read back. It was then restored to the prior 14-byte API payload (SHA-256 <private-artifact-digest>). The 22-byte registry representation was restored to SHA-256 <private-artifact-digest>. All SetValue/Commit calls returned S_OK.
 - Post-restore verification confirmed all six User-context values, app files, defaults, and Atmos-off / zero active-default spatial state. The operation used no audio stream or spatial command and did not launch Dolby Access. Evidence: property_round_trip_20261013.json.
 - This establishes writable property persistence and immediate baseline restoration only. Native load, personalized audio processing, Dolby Access UI integration, and persistence across app launch/restart are unproven. No further live operation is implied by this test.
-- The 12:45 incomplete backup and 13:22 assessment's “paused pending Dot's evidence review” language are historical. The complete 13:06 backup preceded review; the exact test was later reviewed and completed at 13:27. Exact approval is still required for any different registry key/value. Never import the full registry reference or backup.
+- The 12:45 incomplete backup and 13:22 assessment's “paused pending prior coordinator's evidence review” language are historical. The complete 13:06 backup preceded review; the exact test was later reviewed and completed at 13:27. Exact approval is still required for any different registry key/value. Never import the full registry reference or backup.
 
 ## Stated boundaries
 

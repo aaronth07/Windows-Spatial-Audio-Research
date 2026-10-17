@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Checkpoint — 2026-10-13 15:50 UTC
@@ -25,4 +27,4 @@ The corresponding characterization report is `native_capture_characterization_15
 
 Static metadata now maps key PHRTF types and JSON fields: `Checksum` to `correlation_id`, capture dates to property-specific `DateTimeOffset`/`IsoDateTimeConverter`, and `Uuid` to `Guid`/`GuidConverter`. The activation enum converter writes a Boolean; Guid-to-string is linked to a PDB symbol. Metadata order does not establish JSON emission order. The global date converter trace must not be generalized to the attributed capture-date properties; effective converter precedence remains unresolved. See `access_native_metadata_contract_1525UTC.md` and `access_native_metadata_models_20261013.json` (SHA-256 `<private-artifact-digest>`).
 
-Next static target is the activation and Guid converter path. `native_persistence_lifecycle_proposal_1525UTC.md` was submitted to Dot; no new live execution is released. No cache acceptance, settings mutation or new audio capture is established by this offline work.
+Next static target is the activation and Guid converter path. `native_persistence_lifecycle_proposal_1525UTC.md` was submitted to prior coordinator; no new live execution is released. No cache acceptance, settings mutation or new audio capture is established by this offline work.

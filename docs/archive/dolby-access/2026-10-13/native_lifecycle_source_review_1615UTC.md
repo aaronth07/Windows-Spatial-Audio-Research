@@ -1,8 +1,10 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Native PHRTF spatial-toggle source review
 
-The four-run OFF/ON test is ready for Dot's source review. It has not been executed. The new runtime release file is absent; the old six-run approval cannot release this sequence. The original runner, native executable and property transaction remain unchanged.
+The four-run OFF/ON test is ready for prior coordinator's source review. It has not been executed. The new runtime release file is absent; the old six-run approval cannot release this sequence. The original runner, native executable and property transaction remain unchanged.
 
 The runner is `run_native_lifecycle_validation.ps1`. Its exact changes from the successful six-run harness are in `native_lifecycle_runner_20261013.diff`. `native_lifecycle_source_review_20261013.json` lists the five source/executable hashes with `authorized: false`. The new comparator is `compare_native_lifecycle_captures.py`.
 
@@ -32,4 +34,4 @@ After an exact release and exclusive-window instruction, the commands would be:
 
 Historical workspace command omitted; use the public [example guide](../../../../examples/README.md).
 
-Dot must review the exact five hashes before a new runtime release record is created. No release record was created for this preparation.
+prior coordinator must review the exact five hashes before a new runtime release record is created. No release record was created for this preparation.

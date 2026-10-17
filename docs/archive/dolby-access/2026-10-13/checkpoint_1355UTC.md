@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Checkpoint — 2026-10-13 13:55 UTC
@@ -10,7 +12,7 @@ The current persisted playback format is stereo 48 kHz PCM16. The paired recordi
 
 ## Offline native-object validation preparation
 
-The native C++ object helper, C# property transaction wrapper, PowerShell runner, and capture comparison source were compiled and tested offline. The preparation record reports no streams opened and no spatial switcher batch files run. Native runtime has not been released. Dot is reviewing the five pinned hashes and the six-capture baseline1/baseline2, candidate1/candidate2, restored1/restored2 sequence in native_load_validation_plan_1355UTC.md. The desktop remains available for the separate EQ APO task.
+The native C++ object helper, C# property transaction wrapper, PowerShell runner, and capture comparison source were compiled and tested offline. The preparation record reports no streams opened and no spatial switcher batch files run. Native runtime has not been released. prior coordinator is reviewing the five pinned hashes and the six-capture baseline1/baseline2, candidate1/candidate2, restored1/restored2 sequence in native_load_validation_plan_1355UTC.md. The desktop remains available for the separate EQ APO task.
 
 The plan is tied to the existing playback endpoint selected virtual endpoint and paired recording endpoint selected virtual endpoint. It requires actual readback before proceeding and does not change endpoint formats, defaults, routing, or Access UI. Operating system readback is Windows 11 Pro build 26200. The existing SoundVolumeView 2.36 compatibility is unverified; the runtime plan treats failed enable/readback as an abort and does not authorize updating the utility. No run or audio capture has started.
 

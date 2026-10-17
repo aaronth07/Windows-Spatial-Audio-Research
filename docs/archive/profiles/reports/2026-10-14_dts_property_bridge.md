@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 The installed DTS settings component writes native endpoint property blobs. The decoder consumes SPAC/RCHN response data and an RPAN object-panning structure. A custom listener import still needs the exact configuration-to-encoder property-bag bridge, complete rendering semantics and a controlled use experiment. No native DLL, DTS app or audio stream was executed in this pass; live endpoint registry values were read only.

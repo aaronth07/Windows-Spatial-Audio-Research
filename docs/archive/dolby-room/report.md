@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 Current findings and fresh verification: 2026-10-15 PHRTF room causality. The preliminary proposed test below was subsequently completed; see README.md for existing verified controls.

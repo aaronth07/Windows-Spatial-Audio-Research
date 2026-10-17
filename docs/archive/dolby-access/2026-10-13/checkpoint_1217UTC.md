@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Dolby Access PHRTF checkpoint — 2026-10-13 12:17:49 UTC
@@ -22,7 +24,7 @@ The REA DSP session is open. The primary agent is reviewing six Ghidra cache-mod
 - The conditional CAPX branch exists, but current CAPX property state is VT_EMPTY and runtime branch selection is unknown. Native tuning acceptance is untested; SetParams success can conceal decode fallback.
 - LocalCache outer JSON/MD5 serialization and cache persistence remain unresolved. The proposed candidate test is documented at `reports/2026-10-13/native_import_test_plan.md`; it awaits <identity-removed>'s direct approval for the exact endpoint property. The later audio probe is separate, unbuilt, and not execution-ready pending review of stimulus and stream details.
 - The current process token is not an administrator. No writable-store permission probe was attempted. If the approved property operation is denied, stop and use the authorized helper path; do not elevate or bypass access controls.
-- Earlier attempts to relay updates to Dot failed with `AbsolutePathBuf` deserialization errors. Do not repeat the unchanged relay call.
+- Earlier attempts to relay updates to prior coordinator failed with `AbsolutePathBuf` deserialization errors. Do not repeat the unchanged relay call.
 - Python 3.8 initially rejected PEP 604 annotation evaluation in the generator; postponed annotations fixed it and the test/generation/verification/compile sequence then passed. Core-only XOR was the wrong checksum hypothesis; only the extended 11-word trailer check matches.
 
 ## Live changes and rollback

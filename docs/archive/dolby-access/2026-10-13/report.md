@@ -1,10 +1,12 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Dolby Access PHRTF investigation — 2026-10-13
 
 ## Current checkpoint — evidence through 2026-10-13 16:30 UTC
 
-The completed six-run native Spatial Sound sequence remains the only executed runtime validation. Its candidate-dependent output and exact immediate property restoration remain documented in `checkpoint_1510UTC.md`. The four-run OFF/ON lifecycle test has not run; its separate runtime release is absent and the earlier six-run approval does not release it. Dot is reviewing the revised runner.
+The completed six-run native Spatial Sound sequence remains the only executed runtime validation. Its candidate-dependent output and exact immediate property restoration remain documented in `checkpoint_1510UTC.md`. The four-run OFF/ON lifecycle test has not run; its separate runtime release is absent and the earlier six-run approval does not release it. prior coordinator is reviewing the revised runner.
 
 The revised PowerShell runner hash is `<private-artifact-digest>`; the comparator remains `<private-artifact-digest>`. Twelve focused cases passed against the new runner, including timeout/error-output handling and callback/outer-finally cleanup checks. Timeout injection and property transaction restoration are mocked; four benign fixture subprocesses exercised Windows transport without calling the real readers. No real getters, BATs, audio streams, or property API calls occurred.
 
@@ -79,7 +81,7 @@ At `2026-10-13T11:52:05Z`, the existing single registry value matched the export
 
 The corrected WinRT spatial-format query at `2026-10-13T11:59Z` reports `SUPPORTED=true` and active/default format GUID `<identifier-removed>`, matching `get_DolbyAtmosForHeadphones`. See `scripts/read_spatial_format.ps1` and `spatial_format_readonly_20261013.json`. A prior raw MMDevice-ID probe used an unsupported identifier and is retained privately as a failed probe, not state evidence. No format setter, audio stream, playback, or capture ran. The endpoint mix format remains 48 kHz PCM24; no format change.
 
-At this 11:52–12:08 checkpoint, the paired recording endpoint's Dolby-processing property was user-verified only; final capture validation remained future work. The candidate was offline, and Dot review was still pending at that time. The later audio probe requires its own preconditions. Main LocalCache MD5/control-plane restoration remains unresolved, so an endpoint candidate write alone does not prove UI import or restart persistence. Static property ownership is resolved, but runtime branch selection, native acceptance, UI import, restart persistence, and personalized playback remain unverified. The property write/readback/restore completed later at 13:27 UTC, as recorded above.
+At this 11:52–12:08 checkpoint, the paired recording endpoint's Dolby-processing property was user-verified only; final capture validation remained future work. The candidate was offline, and prior coordinator review was still pending at that time. The later audio probe requires its own preconditions. Main LocalCache MD5/control-plane restoration remains unresolved, so an endpoint candidate write alone does not prove UI import or restart persistence. Static property ownership is resolved, but runtime branch selection, native acceptance, UI import, restart persistence, and personalized playback remain unverified. The property write/readback/restore completed later at 13:27 UTC, as recorded above.
 
 ## Prior-session evidence
 
@@ -120,7 +122,7 @@ Static tracing of the Access cache helper at `0x18367d7c0` shows its digest comp
 
 The inspected native tuning-v2 reader stores version bytes separately and contains no version comparison. This statement applies only to that function; it does not establish the absence of gates elsewhere. Five offline tests and the candidate verification in `test_native_init_tuning.py` and `native_import_verification_20261013.json` passed again after the live preflight. Exact serialized JSON member order and accepted cache state remain unresolved.
 
-As recorded in the 12:52 checkpoint, the first fresh backup attempt was incomplete because Settings/settings.dat and its transaction logs were locked; the writable property-store open had returned S_OK, and no setter or commit ran at that time. That backup failure was superseded by the complete backup at 13:06 and immediate complete backup at 13:27. Dot review and the approved property-only set/readback/restore then completed successfully at 13:27. The historical boundary and coordination note remain in checkpoint_1252UTC.md; A prior reviewer is the current coordination route.
+As recorded in the 12:52 checkpoint, the first fresh backup attempt was incomplete because Settings/settings.dat and its transaction logs were locked; the writable property-store open had returned S_OK, and no setter or commit ran at that time. That backup failure was superseded by the complete backup at 13:06 and immediate complete backup at 13:27. prior coordinator review and the approved property-only set/readback/restore then completed successfully at 13:27. The historical boundary and coordination note remain in checkpoint_1252UTC.md; A prior reviewer is the current coordination route.
 
 
 

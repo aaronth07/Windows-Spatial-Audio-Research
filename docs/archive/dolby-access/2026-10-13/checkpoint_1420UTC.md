@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 # Checkpoint — 2026-10-13 14:20 UTC
@@ -20,4 +22,4 @@ Read-only registered Event Log inventory found no provider matching *Dolby*. Thi
 
 ## Evidence
 
-Property readback: property_round_trip_verification_20261013.json. Native preparation and corrected five-hash manifest: native_load_preparation_20261013.json. Converter details: access_date_converter_20261013.json and reports/2026-10-13/cache_serialization_addendum_1408UTC.md. Schema limits: cache_schema_links_20261013.json. Event Log inventory: existing_dolby_log_inventory_20261013.json. Dot's release remains the next gate; the primary-authored native_load_validation_plan_1355UTC.md was not edited.
+Property readback: property_round_trip_verification_20261013.json. Native preparation and corrected five-hash manifest: native_load_preparation_20261013.json. Converter details: access_date_converter_20261013.json and reports/2026-10-13/cache_serialization_addendum_1408UTC.md. Schema limits: cache_schema_links_20261013.json. Event Log inventory: existing_dolby_log_inventory_20261013.json. prior coordinator's release remains the next gate; the primary-authored native_load_validation_plan_1355UTC.md was not edited.

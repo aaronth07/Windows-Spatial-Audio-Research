@@ -1,3 +1,5 @@
+> Historical research note. Workspace instructions and artifact references below describe the original experiment; use the public agent-handoff.md for continuation.
+
 > Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
 
 Windows Sonic and DTS Headphone:X are separate loading investigations. No custom listener import or converter is established yet, and no live audio configuration was changed. The requested next outcome is a native loading proof before any SOFA converter.
