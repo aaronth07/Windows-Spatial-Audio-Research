@@ -1,0 +1,11 @@
+> Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
+
+# Native listener-profile research
+
+DTS Headphone:X accepted the SOFA-derived FIR profile and used its coefficients for native Windows Spatial Sound objects. Verified native result. Baseline/candidate/restored recordings and exact property backups are retained under `dts/native_use/20261014T202745423Z`.
+
+`tools/convert_sofa_dts.py` converts a constant-pose full-sphere SOFA into the installed DTS SPAC representation, preserving common timing and relative ear levels. `tools/dts_profile_control.ps1` supports Backup/Validate/Probe/Apply/Restore. The writer and native validator are deliberately version/fixture-pinned; the verified candidate is `dts/candidates/personalized_sofa_4096_v1/runtime_SPAC.bin`. The installed panner uses23 nodes,22 directional plus origin; this is not a lossless710-direction transfer. Original exact test plan documents the provider selection and restoration sequence. The current endpoint was left on personalized Dolby after that test.
+
+Windows Sonic findings are separate. The inspected default CPU implementation constructs and processes embedded listener tables, ignores the supplied primary dataset in CreateDSP, exposes no replacement operation through its actual engine interfaces, and its exported factory rejects alternate selector values. Architectural result and evidence. Its legacy explicit-HRIR parser does not establish a working custom-profile route into this engine. No registry/file import or Sonic playback was claimed. Sonic's actual runtime engine identity was not inspected while Dolby stayed selected; the conclusion is scoped to the installed inspected default implementation and allowed profile-import methods.
+
+Dolby native room controls and their independently verified personalized coefficient use are in `../DolbyHeadphoneRoomResearch`; coefficient/SOFA reconstruction work is in `../DolbyCoefficientResearch`. No binary patch, license bypass, driver/service/security change or Dolby Atmos Renderer dependency was used.

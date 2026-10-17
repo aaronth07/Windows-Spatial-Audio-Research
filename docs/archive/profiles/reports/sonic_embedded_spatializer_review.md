@@ -1,0 +1,21 @@
+> Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
+
+# Sonic embedded spatializer evidence review
+
+Reviewed `reports/2026-10-14_sonic_embedded_spatializer.md` against the named normalized REA evidence and `windows_sonic/spatial_api_presence_20261014.json`. This was a read-only, bounded review. The three accidental CPU-address queries in the override bundle were excluded.
+
+The nine table rows are consistent with their getter bodies, descriptor bytes, and vtable mapping in `embedded_spatializer_REA_evidence.json`: each getter returns its listed embedded base plus row × descriptor stride, with two-byte elements for `0x1800068d0` and four-byte elements for the other eight getters. The stated dimensions match the recorded descriptors. The direction lookup and the cited constructor/processing call links are also supported by their normalized function records. The 16-weight copy follows the `0x180142388` descriptor's recorded 16-wide value. No table or processing-link discrepancy was found in these records.
+
+Hash verification passed for every selected record: all 25 embedded-spatializer IDs used for the table, constructor, lookup, and processing review target `HrtfDspCpu.dll` SHA256 `4706985ccbc44d74a9060df72c6ae7c7f34e95aeee5d99669fd00ea8d74261f9`; all three selected override IDs target `audioeng.dll` SHA256 `<private-artifact-digest>`. Current System32 and inert analysis-copy hashes matched for HrtfDspCpu, HrtfApo, and audioeng.
+
+## Exact discrepancies and evidence limits
+
+- **Factory lineage and configuration handling are not independently verifiable from the supplied normalized evidence.** The report attributes `CreateHrtfDspFactory(0)`, the Flex2 factory vtable slot, `0x180004c30`, ignored configuration pointers, and the `0x400` block/flag-0 construction to an earlier audit. `embedded_spatializer_REA_evidence.json` contains no normalized record for `0x180004c30` or the factory vtable/call chain. The cited separate `sonic_primary_data_lifetime.md` is outside the evidence bundle specified for this audit. This is a source-evidence gap, not a contradiction. The constructor at `0x18000752c` and its fixed-descriptor setup are independently supported.
+
+- **The “installed static API-set namespace maps that contract to an empty host” statement is unsupported by the supplied evidence.** `override_gate_REA_evidence.json` contains the audioeng gate and an API-set presence call; it contains no static namespace mapping inspection. `spatial_api_presence_20261014.json` records `raw_return: 0`, `present: false` for the research process at `2026-10-14T16:34:53.592673-05:00`; it does not establish an empty host mapping.
+
+- **The exact API-set contract string and its claimed Unicode verification are not shown by these selected normalized records.** The `0x18005c604` record has no referenced-string entry. The selected read at `0x1800fd2d0` is the 16-byte value `4600480000000000307a108001000000`, not the contract text itself. The JSON observation supplies the contract label as metadata, but does not independently show its source bytes. Treat the binary-string provenance claim as unverified against this evidence set.
+
+- **The installed-desktop zero-override conclusion needs narrower wording.** The evidence supports that audioeng calls `TryGetHrtfEngineOverrideCLSID` only when its API-set check returns true, and that the research process's separate presence query returned false. It does not show the result of that query inside the audio engine process or directly inspect the active engine GUID. The report later states this limitation, but “supports the zero-override default path on this installed desktop” should be scoped to the research-process observation rather than generalized to the active audio engine.
+
+The hash groups above comprised the 25 referenced embedded IDs (constructor `ev_3245f597…`, lookup `ev_7be1f225…`, nine getter IDs, three descriptor/vtable byte reads, three setup helpers, and eight processing/interface IDs) and the three referenced audioeng IDs (`ev_41feb284…`, `ev_78a23a82…`, `ev_f5b93ccc…`). All matched their expected target digest. No excluded accidental CPU-address record was used.

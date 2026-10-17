@@ -1,0 +1,47 @@
+> Anonymized archived research note. Experimental results are historical, not rerun by publication. See the current research status and public examples for supported reproduction. Local links and fixture-specific commands were removed.
+
+# Windows Sonic replacement, object decoding and crosstalk cancellation
+
+Research date: 2026-10-15, America/Chicago. Final native checks were recorded on 2026-10-16 UTC. Scope: the installed Windows desktop spatial-audio implementation, inert vendor binaries, and isolated native probes.
+
+Two useful boundaries now work in a private process: Sonic's engine can accept an alternate DSP factory and execute a replacement processing function; the installed DTS decoder can deliver separate nonzero mono buffers with spatial metadata. Neither result installs a system renderer. The DTS fixture produces a fixed 5.1.4 speaker layout, so original moving-object extraction remains unproven.
+
+## Results and practical limits
+
+| Goal | Evidence established | Remaining limitation |
+|---|---|---|
+| Replace Sonic HRTFs through DefaultHrtfs.bin | The file has a parser and configuration-service path. The inspected default CPU Flex2 factory ignores the supplied filter-bank interfaces and uses embedded tables. | Replacing that file is not an established coefficient-loading route for this CPU implementation. No system file was replaced. |
+| Replace Sonic's DSP | The real HrtfApo engine accepted an alternate factory in an isolated host; a replacement diagnostic transfer function ran through its normal render call and matched the expected PCM exactly. | Private-process proof. Windows has not been made to select the replacement. This diagnostic filter is not a personalized HRTF renderer. |
+| Replace the entire system renderer | The engine's provider dispatch and private override branch were traced. | The inspected override is gated by an API contract with no mapped host in the retained namespace evidence. A new arbitrary provider GUID is also rejected by the inspected plugin initializer. No supported registration route was established. |
+| Obtain object audio from Sonic | Its private DSP receives separate source PCM and parameters before binaural mixing. | The public spatial API is a render sink; it does not expose other applications' object streams. A system integration or application-side adapter is still needed. |
+| Decode DTS:X without HDMI | Native DTS decoding produced 256 ten-buffer spatial samples, including nonzero audio and metadata, from the installed DTS:X fixture. Ordinary 5.1 PCM output also worked. | The tested spatial output is a fixed 5.1.4 layout. Original dynamic-object identities and motion were not exposed in this test. |
+| Decode Atmos with Access's home-theater components | Installed MAT modules are registered as encoders/transports. | They are not evidence of an arbitrary-channel Atmos decoder. No Atmos object decode was demonstrated. |
+| Low-latency crosstalk cancellation | Existing four-path native convolution matched a direct reference, with 128 frames of buffering. Synthetic inverse-filter designs were evaluated over multiple lengths and delays. | Acoustic cancellation, head-motion robustness, device latency and real-time underruns were not measured. |
+
+The main verified results are in verified_native_results.json, with the complete checks and logs in the final validation run. Twenty checks passed, including deliberate rejection of unsupported frame counts, wrong binary hashes, unsupported metadata formats and existing output files. The endpoint registry snapshots are exactly equal before and after that run.
+
+## Sonic: coefficients, engine replacement and source access
+
+The pinned CPU DLL is version 2024.0.42, SHA-256 `4706985ccbc44d74a9060df72c6ae7c7f34e95aeee5d99669fd00ea8d74261f9`. HrtfApo is SHA-256 `ffc12d088cc02441061cc2bb7f3b367fe8089662e0fd61ab98209ef6d43b6489`. These hashes match the inspected installed copies.
+
+HrtfApo's engine initializer at RVA `0xb9e0` has two factory paths. A zero override loads HrtfDspCpu and calls `CreateHrtfDspFactory(0)`. A nonzero override calls `CoCreateInstance` for factory interface `b91f3db7-302c-4ae3-83de-7735f24ef462`. Both feed a DSP into the same source/engine machinery. Fresh Ghidra evidence: `ev_7163344e95a8bebc8da64cb74d144c610f0ec2cc0ecc0756727e6e7e2c92e879`, retained in apo_initialize.json.
+
+The isolated engine probe redirected only its own loaded HrtfApo import for the test CLSID. It returned the native factory, created the engine, and temporarily substituted that engine instance's DSP render method. The replacement copied the input to the left output and sent an inverted half-amplitude version to the right output seven samples later. All 12 render calls matched that diagnostic transfer exactly. The original instance method table was restored before engine release. There was no COM registration, installed-DLL edit or audio-service injection. WinDbg repeated this corrected test successfully.
+
+This demonstrates two seams separately: alternate factory activation and replacement processing at the DSP boundary. It does not demonstrate a complete custom factory DLL installed in Windows, a SOFA loader, or replacement of every upstream source-control calculation. HrtfApo still owns source controls and supplies processed source parameters. Replacing that DSP can provide custom binaural filters; replacing the entire listener/room model requires control over the upstream source processing as well, or replacement of the complete engine interface.
+
+The recovered engine render interface accepts an array of `{float* mono_pcm, uint64 frame_count}` source buffers, one entry per configured source, and writes stereo PCM. Its internal DSP source records are 120 bytes, with PCM pointer at offset 104 and frame count at offset 112. Offset 112 was initially misinterpreted in the new diagnostic callback, causing an isolated out-of-bounds read. WinDbg identified the failing read; the callback was corrected and exact-output tests repeated. See the diagnostic report.
+
+The default CPU probe rendered front, left and right impulse responses with the expected directional ear-energy differences. Calls averaged approximately 123–154 microseconds per 1,024-frame block in the final short run. Requested block sizes 32, 64, 128, 256 and 512 wrote beyond the requested output extent and were rejected by the probe's canary checks. The tested private boundary therefore requires the 1,024-frame contract. At 48 kHz that block spans 21.33 ms; this is not a measured total Windows playback latency. The response peak at sample 168 is likewise not an end-to-end latency measurement.
+
+In AudioEng, the default Sonic branch reaches HrtfApo directly. Its optional override lookup is gated by `ext-ms-win-audiocore-spatial-l1-1-0`. The retained API-set inspection found an empty host mapping, and the process-scoped availability test returned false. Those observations do not read the active audiodg process's effective override. The new plugin initializer trace also contains a known-format allowlist and returns `0x887c0077` for unrecognized formats. Registering an arbitrary encoder GUID is consequently not a demonstrated way to add a selectable renderer.
+
+AudioEng's separate multichannel branch consumes endpoint channel count and channel mask and constructs a weak-fold-down helper. This is evidence of a channel-layout renderer, not an arbitrary-position loudspeaker interface. It does not establish that Sonic's stereo DSP can be switched to N outputs.
+
+Microsoft's public HRTF object interface provides position, orientation, directivity, distance decay, gain and environment controls. Its documented surface supplies no coefficient import or renderer-registration method. The spatial client consumes source buffers; source acquisition from another application requires a different integration point. HRTF object interface⁻¹ T · exp(−jωD)`.
+
+G supplies N speaker filters per source. An efficient alternative is to sum the K sources into two desired ear signals first, then apply a two-input/N-output inverse. Both remain filter-based compensation; making the input object-aware does not remove the need to compensate speaker-to-ear crosstalk. Head tracking can update source coordinates and the measured/modelled plant, with filter design outside the audio callback and aligned crossfades during updates.
+
+Regularization, restricted cancellation bandwidth, output-gain limits and causal modeling delay are necessary design controls. A full-room inverse and a zero-delay inverse should not be assumed stable or robust to movement. Primary inversion research identifies modeling delay and regularization as practical requirements. Kirkeby, local sound-field reproduction. `run_research_checks.ps1` takes an explicit metadata endpoint interface and creates a new dated output directory. It requires the matching installed DTS package, its runtime dependency, MSVC/Windows SDK, the retained debugger, and the workspace Python environment. These are local research probes, not a standalone application or redistributable vendor-code package. Format changes, other encoded files, protected content, sustained real-time playback and other Windows builds remain untested.
+
+No installed renderer, system HRTF file, default device, endpoint format, driver or service configuration was written by these experiments. Only private-process import/method tables were changed and discarded/restored with their owning processes. The final checked endpoint registry state is unchanged.

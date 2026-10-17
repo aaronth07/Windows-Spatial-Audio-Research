@@ -1,0 +1,936 @@
+{
+  "implementation_sources": [
+    {
+      "path": "examples/native/sofa_xtc_runtime/runtime.h",
+      "kind": "research implementation",
+      "source_file": "runtime.h"
+    },
+    {
+      "path": "examples/native/sofa_xtc_runtime/adapter.h",
+      "kind": "research implementation",
+      "source_file": "adapter.h"
+    },
+    {
+      "path": "examples/native/sofa_xtc_runtime/dsp.h",
+      "kind": "research implementation",
+      "source_file": "dsp.h"
+    },
+    {
+      "path": "examples/native/sofa_xtc_runtime/probe.cpp",
+      "kind": "research implementation",
+      "source_file": "probe.cpp"
+    },
+    {
+      "path": "examples/native/sofa_xtc_runtime/build.ps1",
+      "kind": "research implementation",
+      "source_file": "build.ps1"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_factory.cpp",
+      "kind": "research implementation",
+      "source_file": "regfree_factory.cpp"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_forwarders.asm",
+      "kind": "research implementation",
+      "source_file": "regfree_forwarders.asm"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_factory.def",
+      "kind": "research implementation",
+      "source_file": "regfree_factory.def"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_factory.manifest",
+      "kind": "research implementation",
+      "source_file": "regfree_factory.manifest"
+    },
+    {
+      "path": "examples/native/system_object_input/factory_initialization.h",
+      "kind": "research implementation",
+      "source_file": "factory_initialization.h"
+    },
+    {
+      "path": "examples/native/system_object_input/bootstrap_api.h",
+      "kind": "research implementation",
+      "source_file": "bootstrap_api.h"
+    },
+    {
+      "path": "examples/native/system_object_input/bootstrap_apo.cpp",
+      "kind": "research implementation",
+      "source_file": "bootstrap_apo.cpp"
+    },
+    {
+      "path": "examples/native/system_object_input/bootstrap_apo.def",
+      "kind": "research implementation",
+      "source_file": "bootstrap_apo.def"
+    },
+    {
+      "path": "examples/native/system_object_input/bootstrap_host.cpp",
+      "kind": "research implementation",
+      "source_file": "bootstrap_host.cpp"
+    },
+    {
+      "path": "examples/native/system_object_input/controlled_source_adapter.cpp",
+      "kind": "research implementation",
+      "source_file": "controlled_source_adapter.cpp"
+    },
+    {
+      "path": "examples/native/system_object_input/build_adapter.ps1",
+      "kind": "research implementation",
+      "source_file": "build_adapter.ps1"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_factory_probe.py",
+      "kind": "research implementation",
+      "source_file": "regfree_factory_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_packet_probe.py",
+      "kind": "research implementation",
+      "source_file": "regfree_packet_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/regfree_sofa_probe.py",
+      "kind": "research implementation",
+      "source_file": "regfree_sofa_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/cpu_preload_probe.py",
+      "kind": "research implementation",
+      "source_file": "cpu_preload_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/bootstrap_probe.py",
+      "kind": "research implementation",
+      "source_file": "bootstrap_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/bootstrap_factory_probe.py",
+      "kind": "research implementation",
+      "source_file": "bootstrap_factory_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/preparation_gate_test.py",
+      "kind": "research implementation",
+      "source_file": "preparation_gate_test.py"
+    },
+    {
+      "path": "examples/native/system_object_input/provider_wrapper_probe.py",
+      "kind": "research implementation",
+      "source_file": "provider_wrapper_probe.py"
+    },
+    {
+      "path": "examples/native/system_object_input/format_admission_probe.py",
+      "kind": "research implementation",
+      "source_file": "format_admission_probe.py"
+    },
+    {
+      "path": "examples/native/eqapo16/eqapo_host.cpp",
+      "kind": "research implementation",
+      "source_file": "eqapo_host.cpp"
+    },
+    {
+      "path": "examples/native/eqapo16/pinned_binary.h",
+      "kind": "research implementation",
+      "source_file": "pinned_binary.h"
+    },
+    {
+      "path": "examples/native/eqapo16/fixed_quantum.h",
+      "kind": "research implementation",
+      "source_file": "fixed_quantum.h"
+    },
+    {
+      "path": "examples/native/eqapo16/vbap_probe.cpp",
+      "kind": "research implementation",
+      "source_file": "vbap_probe.cpp"
+    },
+    {
+      "path": "examples/native/eqapo16/build.ps1",
+      "kind": "research implementation",
+      "source_file": "build.ps1"
+    },
+    {
+      "path": "examples/native/eqapo16/build_vbap.ps1",
+      "kind": "research implementation",
+      "source_file": "build_vbap.ps1"
+    },
+    {
+      "path": "examples/native/eqapo16/stereo_nonuniqueness.py",
+      "kind": "research implementation",
+      "source_file": "stereo_nonuniqueness.py"
+    },
+    {
+      "path": "examples/native/eqapo16/factory_full_sphere.py",
+      "kind": "research implementation",
+      "source_file": "factory_full_sphere.py"
+    },
+    {
+      "path": "examples/native/dts_pcm_runtime/pcm_ring.h",
+      "kind": "research implementation",
+      "source_file": "pcm_ring.h"
+    },
+    {
+      "path": "examples/native/dts_pcm_runtime/packed_pcm12.h",
+      "kind": "research implementation",
+      "source_file": "packed_pcm12.h"
+    },
+    {
+      "path": "examples/native/dts_pcm_runtime/pcm12_stream.cpp",
+      "kind": "research implementation",
+      "source_file": "pcm12_stream.cpp"
+    },
+    {
+      "path": "examples/native/dts_pcm_runtime/pinned_binary.h",
+      "kind": "research implementation",
+      "source_file": "pinned_binary.h"
+    },
+    {
+      "path": "examples/native/open_object_decoder/inspect_fixture.py",
+      "kind": "research implementation",
+      "source_file": "inspect_fixture.py"
+    },
+    {
+      "path": "examples/native/open_object_decoder/scan_uhd_samples.py",
+      "kind": "research implementation",
+      "source_file": "scan_uhd_samples.py"
+    },
+    {
+      "path": "examples/native/live_object_tap/protocol.h",
+      "kind": "research implementation",
+      "source_file": "protocol.h"
+    },
+    {
+      "path": "examples/native/live_object_tap/producer.cpp",
+      "kind": "research implementation",
+      "source_file": "producer.cpp"
+    },
+    {
+      "path": "examples/native/live_object_tap/build.ps1",
+      "kind": "research implementation",
+      "source_file": "build.ps1"
+    },
+    {
+      "path": "examples/native/live_object_tap/offline_tests.cpp",
+      "kind": "research implementation",
+      "source_file": "offline_tests.cpp"
+    },
+    {
+      "path": "examples/native/live_object_tap/verify.py",
+      "kind": "research implementation",
+      "source_file": "verify.py"
+    },
+    {
+      "path": "examples/native/live_object_tap_multistream/protocol.h",
+      "kind": "research implementation",
+      "source_file": "protocol.h"
+    },
+    {
+      "path": "examples/native/live_object_tap_multistream/producer.cpp",
+      "kind": "research implementation",
+      "source_file": "producer.cpp"
+    },
+    {
+      "path": "examples/native/live_object_tap_multistream/build.ps1",
+      "kind": "research implementation",
+      "source_file": "build.ps1"
+    },
+    {
+      "path": "examples/native/live_object_tap_multistream/offline_tests.cpp",
+      "kind": "research implementation",
+      "source_file": "offline_tests.cpp"
+    },
+    {
+      "path": "examples/native/live_object_tap_multistream/verify.py",
+      "kind": "research implementation",
+      "source_file": "verify.py"
+    },
+    {
+      "path": "examples/native/live_object_clock/protocol.h",
+      "kind": "research implementation",
+      "source_file": "protocol.h"
+    },
+    {
+      "path": "examples/native/live_object_clock/producer.cpp",
+      "kind": "research implementation",
+      "source_file": "producer.cpp"
+    },
+    {
+      "path": "examples/native/live_object_clock/build.ps1",
+      "kind": "research implementation",
+      "source_file": "build.ps1"
+    },
+    {
+      "path": "examples/native/live_object_clock/offline_tests.cpp",
+      "kind": "research implementation",
+      "source_file": "offline_tests.cpp"
+    },
+    {
+      "path": "examples/native/live_object_clock/verify.py",
+      "kind": "research implementation",
+      "source_file": "verify.py"
+    },
+    {
+      "path": "examples/native/live_object_clock/analyze_clocks.py",
+      "kind": "research implementation",
+      "source_file": "analyze_clocks.py"
+    },
+    {
+      "path": "examples/native/live_object_latency/build.ps1",
+      "kind": "research implementation",
+      "source_file": "build.ps1"
+    },
+    {
+      "path": "examples/native/live_object_latency/analyze.py",
+      "kind": "research implementation",
+      "source_file": "analyze.py"
+    },
+    {
+      "path": "examples/native/live_object_tap/tap_host.cpp",
+      "kind": "default-endpoint adaptation",
+      "source_file": "tap_host.cpp"
+    },
+    {
+      "path": "examples/native/live_object_tap_multistream/tap_host.cpp",
+      "kind": "default-endpoint adaptation",
+      "source_file": "tap_host.cpp"
+    },
+    {
+      "path": "examples/native/live_object_clock/tap_host.cpp",
+      "kind": "default-endpoint adaptation",
+      "source_file": "tap_host.cpp"
+    },
+    {
+      "path": "examples/native/live_object_latency/latency_probe.cpp",
+      "kind": "default-endpoint adaptation",
+      "source_file": "latency_probe.cpp"
+    },
+    {
+      "path": "examples/profile_format.py",
+      "kind": "read-only wire primitives",
+      "source_file": "inspect_payload.py"
+    }
+  ],
+  "anonymized_notes": [
+    {
+      "path": "docs/archive/sonic/coefficient_findings.md",
+      "category": "sonic",
+      "source_file": "coefficient_findings.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/dts_motion_fixture/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/dts_pcm_runtime/private_layout_diagnosis.md",
+      "category": "sonic",
+      "source_file": "private_layout_diagnosis.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/dts_pcm_runtime/quarantine/README.md",
+      "category": "sonic",
+      "source_file": "README.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/dts_pcm_runtime/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/eqapo16/processing_diagnosis.md",
+      "category": "sonic",
+      "source_file": "processing_diagnosis.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/eqapo16/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/live_object_clock/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/live_object_latency/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/live_object_tap/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/live_object_tap_multistream/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/open_object_decoder/dts_source_audit.md",
+      "category": "sonic",
+      "source_file": "dts_source_audit.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/sofa_xtc_runtime/eqapo_review/review.md",
+      "category": "sonic",
+      "source_file": "review.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/sofa_xtc_runtime/integration_api.md",
+      "category": "sonic",
+      "source_file": "integration_api.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/sofa_xtc_runtime/peer_review.md",
+      "category": "sonic",
+      "source_file": "peer_review.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/sofa_xtc_runtime/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/bootstrap_properties.md",
+      "category": "sonic",
+      "source_file": "bootstrap_properties.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/bootstrap_test_plan.md",
+      "category": "sonic",
+      "source_file": "bootstrap_test_plan.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/evidence_notes.md",
+      "category": "sonic",
+      "source_file": "evidence_notes.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/factory_initialization_review.md",
+      "category": "sonic",
+      "source_file": "factory_initialization_review.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/host_admission_review.md",
+      "category": "sonic",
+      "source_file": "host_admission_review.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/provider_contract.md",
+      "category": "sonic",
+      "source_file": "provider_contract.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/report.md",
+      "category": "sonic",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/sonic/continuation/system_object_input/root_chain_review.md",
+      "category": "sonic",
+      "source_file": "root_chain_review.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-15_codec_inventory.md",
+      "category": "sonic",
+      "source_file": "2026-10-15_codec_inventory.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-15_inventory.md",
+      "category": "sonic",
+      "source_file": "2026-10-15_inventory.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-15_probe_abi_diagnosis.md",
+      "category": "sonic",
+      "source_file": "2026-10-15_probe_abi_diagnosis.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-15_research_report - Full Stack Copy.md",
+      "category": "sonic",
+      "source_file": "2026-10-15_research_report - Full Stack Copy.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-15_research_report.md",
+      "category": "sonic",
+      "source_file": "2026-10-15_research_report.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-16_sofa_renderer_focus - Sonic Replacement - Copy.md",
+      "category": "sonic",
+      "source_file": "2026-10-16_sofa_renderer_focus - Sonic Replacement - Copy.md"
+    },
+    {
+      "path": "docs/archive/sonic/reports/2026-10-16_sofa_renderer_focus.md",
+      "category": "sonic",
+      "source_file": "2026-10-16_sofa_renderer_focus.md"
+    },
+    {
+      "path": "docs/archive/sonic/research_plan.md",
+      "category": "sonic",
+      "source_file": "research_plan.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/capx_abi.md",
+      "category": "profiles",
+      "source_file": "capx_abi.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/producer_inventory.md",
+      "category": "profiles",
+      "source_file": "producer_inventory.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/room_presets_20261015/discovery.md",
+      "category": "profiles",
+      "source_file": "discovery.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/room_presets_20261015/report.md",
+      "category": "profiles",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/room_presets_20261015/sd1_sd2_test_plan.md",
+      "category": "profiles",
+      "source_file": "sd1_sd2_test_plan.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/room_presets_20261015/winmd_method_metadata_20261015.md",
+      "category": "profiles",
+      "source_file": "winmd_method_metadata_20261015.md"
+    },
+    {
+      "path": "docs/archive/profiles/dts/sonic_renderer_link_inventory.md",
+      "category": "profiles",
+      "source_file": "sonic_renderer_link_inventory.md"
+    },
+    {
+      "path": "docs/archive/profiles/inventory/report.md",
+      "category": "profiles",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/profiles/README.md",
+      "category": "profiles",
+      "source_file": "README.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_dts_native_use_test_plan.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_dts_native_use_test_plan.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_dts_native_use_verified.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_dts_native_use_verified.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_dts_property_bridge.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_dts_property_bridge.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_dts_sofa_conversion.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_dts_sofa_conversion.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_initial_findings.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_initial_findings.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_progress.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_progress.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_progress_native_validation.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_progress_native_validation.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_sonic_dataset_and_cache.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_sonic_dataset_and_cache.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_sonic_embedded_spatializer.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_sonic_embedded_spatializer.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_sonic_explicit_hrir_layout.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_sonic_explicit_hrir_layout.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/2026-10-14_sonic_renderer_bridge.md",
+      "category": "profiles",
+      "source_file": "2026-10-14_sonic_renderer_bridge.md"
+    },
+    {
+      "path": "docs/archive/profiles/reports/sonic_embedded_spatializer_review.md",
+      "category": "profiles",
+      "source_file": "sonic_embedded_spatializer_review.md"
+    },
+    {
+      "path": "docs/archive/profiles/windows_sonic/sonic_cache_update_audit.md",
+      "category": "profiles",
+      "source_file": "sonic_cache_update_audit.md"
+    },
+    {
+      "path": "docs/archive/profiles/windows_sonic/sonic_primary_data_lifetime.md",
+      "category": "profiles",
+      "source_file": "sonic_primary_data_lifetime.md"
+    },
+    {
+      "path": "docs/archive/profiles/windows_sonic/supplemental_sonic_evidence_review.md",
+      "category": "profiles",
+      "source_file": "supplemental_sonic_evidence_review.md"
+    },
+    {
+      "path": "docs/archive/dolby-coefficients/ear_output_routing.md",
+      "category": "dolby-coefficients",
+      "source_file": "ear_output_routing.md"
+    },
+    {
+      "path": "docs/archive/dolby-coefficients/ear_output_routing_review.md",
+      "category": "dolby-coefficients",
+      "source_file": "ear_output_routing_review.md"
+    },
+    {
+      "path": "docs/archive/dolby-coefficients/findings.md",
+      "category": "dolby-coefficients",
+      "source_file": "findings.md"
+    },
+    {
+      "path": "docs/archive/dolby-coefficients/future_sofa_synthesis_next_edge.md",
+      "category": "dolby-coefficients",
+      "source_file": "future_sofa_synthesis_next_edge.md"
+    },
+    {
+      "path": "docs/archive/dolby-coefficients/native_decode_validation.md",
+      "category": "dolby-coefficients",
+      "source_file": "native_decode_validation.md"
+    },
+    {
+      "path": "docs/archive/dolby-coefficients/native_filterbank_findings.md",
+      "category": "dolby-coefficients",
+      "source_file": "native_filterbank_findings.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/native_path_selection.md",
+      "category": "dolby-room",
+      "source_file": "native_path_selection.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/near_anechoic_wire_mapping.md",
+      "category": "dolby-room",
+      "source_file": "near_anechoic_wire_mapping.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/parameter_map.md",
+      "category": "dolby-room",
+      "source_file": "parameter_map.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/README.md",
+      "category": "dolby-room",
+      "source_file": "README.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/replacement_feasibility.md",
+      "category": "dolby-room",
+      "source_file": "replacement_feasibility.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/report.md",
+      "category": "dolby-room",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_continuous_room_test_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_continuous_room_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_directional_gain_native_result.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_directional_gain_native_result.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_directional_gain_native_test_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_directional_gain_native_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_enabled_room_groups_test_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_enabled_room_groups_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_enabled_room_native_result.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_enabled_room_native_result.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_room_control_cycle_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_room_control_cycle_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_room_distance_native_result.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_room_distance_native_result.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_room_distance_test_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_room_distance_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_room_tap_native_result.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_room_tap_native_result.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_room_tap_native_test_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_room_tap_native_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_trailer_control_native_result.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_trailer_control_native_result.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-14_trailer_control_native_test_plan.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-14_trailer_control_native_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/2026-10-15_phrtf_room_causality.md",
+      "category": "dolby-room",
+      "source_file": "2026-10-15_phrtf_room_causality.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/reports/routine_verification_20261014.md",
+      "category": "dolby-room",
+      "source_file": "routine_verification_20261014.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/runtime_mode_mapping.md",
+      "category": "dolby-room",
+      "source_file": "runtime_mode_mapping.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/source_category_1_mapping.md",
+      "category": "dolby-room",
+      "source_file": "source_category_1_mapping.md"
+    },
+    {
+      "path": "docs/archive/dolby-room/trailer_room_gate_mapping.md",
+      "category": "dolby-room",
+      "source_file": "trailer_room_gate_mapping.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/access_native_metadata_contract_1525UTC.md",
+      "category": "dolby-access",
+      "source_file": "access_native_metadata_contract_1525UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/access_profile_converters_1555UTC.md",
+      "category": "dolby-access",
+      "source_file": "access_profile_converters_1555UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/cache_serialization_addendum_1408UTC.md",
+      "category": "dolby-access",
+      "source_file": "cache_serialization_addendum_1408UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1217UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1217UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1226UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1226UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1244UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1244UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1252UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1252UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1328UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1328UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1355UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1355UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1420UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1420UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1443UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1443UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1510UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1510UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1550UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1550UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1615UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1615UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_1630UTC.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_1630UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/checkpoint_log.md",
+      "category": "dolby-access",
+      "source_file": "checkpoint_log.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/dependency_rollback_assessment_1322UTC.md",
+      "category": "dolby-access",
+      "source_file": "dependency_rollback_assessment_1322UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_capture_characterization_1540UTC.md",
+      "category": "dolby-access",
+      "source_file": "native_capture_characterization_1540UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_default_guard_1440UTC.md",
+      "category": "dolby-access",
+      "source_file": "native_default_guard_1440UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_import_test_plan.md",
+      "category": "dolby-access",
+      "source_file": "native_import_test_plan.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_lifecycle_getter_review_1628UTC.md",
+      "category": "dolby-access",
+      "source_file": "native_lifecycle_getter_review_1628UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_lifecycle_source_review_1615UTC.md",
+      "category": "dolby-access",
+      "source_file": "native_lifecycle_source_review_1615UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_load_validation_plan_1355UTC.md",
+      "category": "dolby-access",
+      "source_file": "native_load_validation_plan_1355UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/native_persistence_lifecycle_proposal_1525UTC.md",
+      "category": "dolby-access",
+      "source_file": "native_persistence_lifecycle_proposal_1525UTC.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/permission_log.md",
+      "category": "dolby-access",
+      "source_file": "permission_log.md"
+    },
+    {
+      "path": "docs/archive/dolby-access/2026-10-13/report.md",
+      "category": "dolby-access",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/capture/CHANGELOG.md",
+      "category": "capture",
+      "source_file": "CHANGELOG.md"
+    },
+    {
+      "path": "docs/archive/capture/HANDOFF.md",
+      "category": "capture",
+      "source_file": "HANDOFF.md"
+    },
+    {
+      "path": "docs/archive/capture/README.md",
+      "category": "capture",
+      "source_file": "README.md"
+    },
+    {
+      "path": "docs/archive/capture/validation/packaging_inventory.md",
+      "category": "capture",
+      "source_file": "packaging_inventory.md"
+    },
+    {
+      "path": "docs/archive/capture/VALIDATION.md",
+      "category": "capture",
+      "source_file": "VALIDATION.md"
+    },
+    {
+      "path": "docs/archive/profile-application/docs/development.md",
+      "category": "profile-application",
+      "source_file": "development.md"
+    },
+    {
+      "path": "docs/archive/profile-application/docs/release-notes.md",
+      "category": "profile-application",
+      "source_file": "release-notes.md"
+    },
+    {
+      "path": "docs/archive/profile-application/docs/technical-report.md",
+      "category": "profile-application",
+      "source_file": "technical-report.md"
+    },
+    {
+      "path": "docs/archive/profile-application/docs/user-guide.md",
+      "category": "profile-application",
+      "source_file": "user-guide.md"
+    },
+    {
+      "path": "docs/archive/profile-application/DtsTools/THIRD_PARTY_NOTICES.md",
+      "category": "profile-application",
+      "source_file": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "path": "docs/archive/profile-application/README.md",
+      "category": "profile-application",
+      "source_file": "README.md"
+    },
+    {
+      "path": "docs/archive/profile-application/report.md",
+      "category": "profile-application",
+      "source_file": "report.md"
+    },
+    {
+      "path": "docs/archive/profile-application/verification_report_PHRTFAPP-2026-10-15.md",
+      "category": "profile-application",
+      "source_file": "verification_report_PHRTFAPP-2026-10-15.md"
+    }
+  ]
+}

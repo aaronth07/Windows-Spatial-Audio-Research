@@ -1,0 +1,18 @@
+LIBRARY regfree_factory
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE
+    ConfigureCpuPath
+    GetCreationCount
+    ConfigureDiagnostic
+    GetDiagnosticCalls
+    GetDiagnosticErrors
+    GetLiveDspCount
+    CreateHrtfDspFactory
+    CreateHrtfDataHelper
+    ConfigureSofa
+    GetSofaCalls
+    GetSofaErrors
+    GetRenderAllocations
+    GetSofaObservations
+    InitializeCpuFactory
