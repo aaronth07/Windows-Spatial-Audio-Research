@@ -1,6 +1,6 @@
 # Primary references
 
-The implementation evidence is version-pinned; documentation below describes the public contracts or methods. Private ABI observations do not become supported APIs through these links.
+Use these references for the public API contracts and measurement methods. The research guides specify which builds were tested when discussing private interfaces.
 
 - Microsoft: [Render spatial sound using spatial audio objects](https://learn.microsoft.com/en-us/windows/win32/coreaudio/render-spatial-sound-using-spatial-audio-objects).
 - Microsoft: [ISpatialAudioClient](https://learn.microsoft.com/en-us/windows/win32/api/spatialaudioclient/nn-spatialaudioclient-ispatialaudioclient).

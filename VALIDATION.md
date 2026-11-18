@@ -1,6 +1,6 @@
 # Public snapshot validation
 
-The public source was checked on Windows x64 on 2026-10-16 with Python 3.12, MSVC C++17 and the Windows SDK. These checks apply to this generic public copy; older live results are explicitly historical in the archived notes.
+The release checks ran on Windows x64 on October 16, 2026, with Python 3.12, MSVC C++17, and the Windows SDK. To repeat the offline checks, follow [Run the examples](README.md#run-the-examples). The archived notes contain earlier live experiments.
 
 - Six Python tests passed: profile checksum and isolated room-tap edits, malformed payload rejection, sweep calibration, shared stereo onset trim, fractional-octave smoothing and generated SOFA/native-bank parity.
 - Seven media chunk-mapping and nine latency correlation cases passed without opening an audio stream.

@@ -1,14 +1,11 @@
 # Changelog
 
-## 1.0.0 — 2026-10-16
+## 1.0.0 (2026-10-16)
 
-Initial public research snapshot covering Windows object input, native rendering, personalization, room processing, SOFA, multichannel convolution and XTC.
+First public release. It documents Windows spatial object input, native rendering, headphone personalization, room processing, and multichannel output. The offline examples use synthetic fixtures.
 
-- Consolidate the research into a navigable Markdown wiki, eleven topic guides and detailed anonymized archival notes.
-- Document native Sonic factory replacement, preparation, safe early entry and unresolved audio-host integration.
-- Preserve Dolby/DTS format and room-processing findings, including corrected auxiliary-send interpretations and coefficient-synthesis limits.
-- Add generic source examples for native object forwarding, full-tail convolution, arbitrary speaker panning, PCM transport and timing analysis.
-- Add generated synthetic fixtures and offline checks without requiring a personal profile or recording.
-- Add a public-data audit, source index and agent continuation guide.
+- Eleven topic guides and an anonymized research archive cover Sonic, Dolby, DTS, SOFA, convolution, crosstalk cancellation, and latency.
+- The examples demonstrate object forwarding, full filter tails, speaker panning, PCM transport, and timing analysis.
+- The research status separates isolated native engine results from system audio-host integration that still needs verification.
 
-Full changelog: this file records the initial release; there is no earlier public release in this repository.
+Read the [overview](README.md), [research status](RESEARCH_STATUS.md), or [validation record](VALIDATION.md).

@@ -1,5 +1,7 @@
 # DTS decoding and linear PCM transport
 
+The available DTS-UHD fixture verifies channel-based decoding and PCM transport. It does not contain a known moving-object trajectory for comparison.
+
 ## The available fixture
 
 The available media uses an MP4 `dtsx` sample entry and DTS-UHD framing. Every one of 2,816 access-unit starts was inventoried: 31 use sync word `40411bf2` and 2,785 use `71c442e8`. All 31 parsed sync-frame prefixes set the full-channel-based-mix flag. The alternate-frame syntax, complete profile conformance and CRC were not parsed.

@@ -1,6 +1,6 @@
 # Latency, clocks and real-time evidence
 
-Latency is a collection of different quantities. Keep source packet duration, accumulation, convolution buffering, target delay, processing work, scheduling, queue residence and device/acoustic delay separate.
+Separate packet duration, filter buffering, processing time, and device delay before comparing latency results. The table keeps those measurements separate from scheduling, queue residence, and the inverse filter’s target delay.
 
 | Quantity | Example at 48 kHz | Interpretation |
 |---|---:|---|

@@ -1,6 +1,8 @@
-[Home](Home.md)
+[Research index](Home.md)
 
-[Status](../RESEARCH_STATUS.md)
+[Results and limits](../RESEARCH_STATUS.md)
+
+[Run the examples](../examples/README.md)
 
 [Architecture](../docs/topics/01-architecture.md)
 
@@ -12,14 +14,12 @@
 
 [SOFA capture](../docs/topics/08-sofa-measurement.md)
 
-[Sixteen channels](../docs/topics/09-multichannel-convolution.md)
+[Multichannel convolution](../docs/topics/09-multichannel-convolution.md)
 
-[XTC](../docs/topics/10-crosstalk-cancellation.md)
+[Crosstalk cancellation](../docs/topics/10-crosstalk-cancellation.md)
 
 [Latency](../docs/topics/11-latency.md)
 
 [Methods](../docs/methods/README.md)
 
 [Archive](../docs/ARCHIVE_INDEX.md)
-
-[Agent handoff](../agent-handoff.md)

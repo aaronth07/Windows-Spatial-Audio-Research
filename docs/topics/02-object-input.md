@@ -1,5 +1,7 @@
 # Object input, lifetime and interception
 
+The example captures PCM, positions, and lifetimes from a producer it controls. It copies the data before Windows releases the update buffers.
+
 ## Submission sequence
 
 The producer activates a real spatial render stream, starts it, waits for its event, calls BeginUpdatingAudioObjects, acquires object buffers, sets position/volume, and finishes with EndUpdatingAudioObjects. Data must be retained before End: the underlying buffers are not owned by the observer and cannot be kept as long-lived pointers afterward.

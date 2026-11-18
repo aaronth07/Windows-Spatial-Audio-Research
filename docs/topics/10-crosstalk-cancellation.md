@@ -1,5 +1,7 @@
 # Object-based crosstalk cancellation
 
+Filter the desired ear signals through a measured speaker-to-ear matrix. Two speakers and two ears require four paths measured with shared timing and gain.
+
 ## Signal chain
 
 The object renderer first produces desired left/right ear signals from object PCM and a SOFA field. A two-input/two-output speaker filter then compensates a measured speaker-to-ear transfer matrix. For two speakers and two ears, the physical plant has four paths with common timing, gain, ear order and listener pose.

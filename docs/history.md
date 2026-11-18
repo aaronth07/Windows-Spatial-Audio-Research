@@ -1,6 +1,6 @@
 # Research history
 
-This account consolidates relevant saved research summaries and later workspace evidence. It does not reproduce private conversation metadata, personal preferences, approvals, account information or machine identifiers. Earlier findings are historical and may be superseded by a narrower later test.
+This timeline follows the research from early HRTF measurements to the release checks. Start with [Research status](../RESEARCH_STATUS.md) for the latest conclusions and their limits.
 
 ## HRTF/SOFA processing foundations
 

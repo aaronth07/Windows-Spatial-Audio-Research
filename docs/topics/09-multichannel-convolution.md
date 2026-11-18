@@ -1,5 +1,7 @@
 # Object rendering to sixteen-channel convolution
 
+The tested chain pans available object PCM onto a speaker array, then processes it through sixteen Equalizer APO buses. The custom output was evaluated offline.
+
 ## Explicit speaker geometry
 
 Given available object PCM, position and gain, vector-base amplitude panning solves for nonnegative gains on a surrounding speaker triplet. Normalize squared gain consistently and apply source volume once. A valid three-dimensional layout surrounds the listener; an uncovered direction is an error, not a reason to invent an extra signal.

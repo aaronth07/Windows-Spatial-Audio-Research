@@ -1,6 +1,6 @@
 # Reverse-engineering methods
 
-The research used complementary static, runtime, format, signal and causal methods. No single tool establishes every layer of behavior. This index documents the methods actually represented in the record, rather than claiming every technique known to reverse engineering was applied.
+Choose a method based on what you want to verify: which code is present, which path runs, how the data is structured, or what changes at the output. Each method answers a different question.
 
 | Method | What it establishes | Important limit |
 |---|---|---|

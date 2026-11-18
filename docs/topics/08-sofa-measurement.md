@@ -1,5 +1,7 @@
 # Virtual SOFA measurement
 
+Render a known signal at a fixed object direction, record both channels, and deconvolve the response. The result includes the active renderer and recording path.
+
 ## What is measured
 
 A stationary native dynamic Windows spatial object can act as a virtual source. For each fixed direction, render a known excitation and record the selected endpoint's stereo mix through WASAPI loopback or an explicitly selected recording endpoint. Deconvolution yields the complete active source-to-recording response, including the renderer, endpoint effects and capture path.

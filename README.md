@@ -1,8 +1,10 @@
 # Windows Spatial Audio Research
 
-Research and reproducible examples for Windows Spatial Sound, object rendering, headphone personalization, SOFA, multichannel PCM, and crosstalk cancellation.
+This project documents where Windows spatial audio objects can be captured, how they can be rendered to headphones or speakers, and what information a stereo mix retains. It includes offline examples for Windows Spatial Sound, headphone personalization, SOFA, multichannel PCM, and crosstalk cancellation.
 
-The central distinction is between **access to source objects**, **rendering those objects**, and **decoding compressed media**. Windows spatial clients submit PCM and object controls. A custom speaker or headphone renderer can process those objects before mixing; a stereo loopback cannot uniquely recover the original arbitrary scene afterward.
+To reproduce the offline checks, start with [Run the examples](#run-the-examples). For experiment results and their limits, see [What the tests showed](#what-the-tests-showed) or the [full research status](RESEARCH_STATUS.md).
+
+Windows spatial clients submit PCM and object controls. A custom renderer can process both before mixing. The resulting stereo signal cannot uniquely identify the original object scene. Compressed-media decoding is a separate step.
 
 ```mermaid
 flowchart LR
@@ -17,7 +19,20 @@ flowchart LR
     J --> A
 ```
 
-## Results
+## Run the examples
+
+From the repository root, run the offline checks with Python 3.10 or later. To build the native examples on Windows x64, install Visual Studio C++ tools and a Windows SDK. The build scripts locate both automatically from their installation metadata.
+
+```powershell
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python tools/generate_fixtures.py
+python tools/run_examples.py
+```
+
+The default runner works offline. Use the [example guide](examples/README.md) to run the separate native-library or live capture tests. The native-library tests use local, version-pinned DLLs. Live capture uses the current default render endpoint and requires spatial support. It leaves providers, defaults, installed effects, and endpoint settings unchanged.
+
+## What the tests showed
 
 | Topic | Established scope | Remaining limit |
 |---|---|---|
@@ -30,7 +45,7 @@ flowchart LR
 | Dolby personalization and room | Endpoint-property delivery affects native object-rendered output; room/direct fields mapped separately | Consumer UI/cache import, arbitrary versions and acoustic personalization claims |
 | XTC | Native full-filter processing matches synthetic references | Physical cancellation requires measured speaker-to-ear paths |
 
-These are deliberately scoped findings. A private engine is not the Windows audio service, a synthetic plant is not an acoustic test, and a decoder CPU time is not end-to-end latency. See [research status](RESEARCH_STATUS.md).
+The native engine tests ran in an isolated process. The crosstalk tests used synthetic speaker-to-ear paths. Decoder CPU timings measure processing time only. See the [research status](RESEARCH_STATUS.md) for the conditions behind each result.
 
 ## Read the research
 
@@ -51,21 +66,8 @@ These are deliberately scoped findings. A private engine is not the Windows audi
 
 The archive contains anonymized research notes, including abandoned approaches and corrected interpretations. It is historical evidence. The public examples use synthetic fixtures and have their own validation record.
 
-## Run the examples
-
-Python 3.10+ with the packages in `requirements.txt` is sufficient for the offline Python checks. Windows x64 native examples additionally require Visual Studio C++ tools and a Windows SDK. The scripts locate those tools through their standard installation metadata.
-
-```powershell
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
-python tools/generate_fixtures.py
-python tools/run_examples.py
-```
-
-The default example runner opens no audio stream. Optional native-library experiments load local version-pinned Windows/vendor DLLs in owned processes; those files are not distributed. Live examples select the current default render endpoint, require existing spatial support, and are explicitly invoked separately. They do not select providers, change defaults, install effects or write endpoint settings. See the [example guide](examples/README.md).
-
 ## Public data and provenance
 
-The repository contains no personal headphone profile, measured personal HRIR array, recording, endpoint inventory, machine registry dump, vendor binary, debugger installer or Ghidra database. Technical class/interface identifiers and version-pinned vendor binary hashes remain where they are necessary to describe a loading contract. Device-instance identifiers and private artifact hashes were removed.
+The published materials include synthetic fixtures, source examples, and anonymized research notes. Technical class and interface identifiers and version-pinned vendor binary hashes document loading requirements. See the [validation record](VALIDATION.md) for the publication checks.
 
-The code here is research code, not a system-wide renderer installer. No example silently installs an APO or replaces a system file. [Source index](docs/SOURCE_INDEX.json), [validation](VALIDATION.md), [primary references](docs/REFERENCES.md), and [release notes](CHANGELOG.md) describe the public snapshot.
+The examples run in the scopes described above and leave system files and installed APOs unchanged. [Source index](docs/SOURCE_INDEX.json), [validation](VALIDATION.md), [primary references](docs/REFERENCES.md), and [release notes](CHANGELOG.md) describe the public snapshot.

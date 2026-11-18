@@ -1,5 +1,7 @@
 # Dolby room processing and coefficient recovery
 
+The inspected profile represents a directional field in complex subbands. Recovering time-domain SOFA responses requires additional synthesis and routing evidence.
+
 ## The encoded directional field
 
 The inspected profile contains a continuous polynomial directional transfer field in complex subbands, not a list of sampled time-domain HRIRs. The decoded logical field has shape `[ear=2, band=77, term=36, component=2]`. Thirty-six is a polynomial basis coefficient count; seventy-seven is a hybrid-band count. Neither is a number of HRIR taps or measured directions.

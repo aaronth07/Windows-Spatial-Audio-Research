@@ -1,5 +1,7 @@
 # DTS personalized FIRs and native room presets
 
+The tested DTS room presets can be restored while keeping the personalized FIRs. The runtime carrier also holds panner and auxiliary data.
+
 ## Runtime data is more than an HRIR table
 
 The inspected headphone runtime carrier contains a directional FIR table, panner/origin information and auxiliary vectors used by later processing. Importing SOFA data means mapping a complete binaural field to the carrier's native direction geometry while preserving compatible non-HRIR structure. An arbitrary channel count or a file labeled SOFA is not enough.

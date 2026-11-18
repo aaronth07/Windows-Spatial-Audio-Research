@@ -1,5 +1,7 @@
 # Sonic coefficient paths and DSP replacement
 
+The tested Sonic engine ran a custom SOFA DSP in an isolated process. System audio-host admission is a separate test.
+
 ## Legacy HRTF dataset versus active CPU DSP
 
 The legacy dataset has a parser/configuration path and a serialized directional response layout. That fact is insufficient to show that the current headphone CPU implementation consumes it. In the inspected Flex2 factory, supplied legacy filter-bank interfaces are ignored at DSP creation and processing reaches embedded descriptors/tables. Replacing that file was therefore not a working coefficient update for the examined route.

@@ -1,6 +1,6 @@
 # Examples
 
-The default suite is offline. Its filters, positions, PCM and profile words are synthetic, not captured listener data.
+Start with the [offline suite](#default-synthetic-suite). It uses synthetic filters, positions, PCM, and profile data. The native-engine and live-capture experiments have separate requirements.
 
 | Example | Purpose | Dependencies |
 |---|---|---|
@@ -18,9 +18,10 @@ The default suite is offline. Its filters, positions, PCM and profile words are 
 
 ## Default synthetic suite
 
-From the repository root:
+From the repository root, install the Python requirements and run the suite:
 
 ```powershell
+python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python tools/generate_fixtures.py
 python tools/run_examples.py
@@ -28,11 +29,11 @@ python tools/run_examples.py
 
 Generated fixtures go to ignored `fixtures/generated`; the default runner uses temporary result directories. Existing explicit output paths are refused. The runner builds native sources on Windows and opens no device stream. Installed-library compatibility requires separate probes.
 
-The public runner does not require a personal SOFA or media file. A generated SOFA is a numerical fixture only. Its receiver geometry and synthetic filters are not anatomical measurements.
+The runner generates its own inputs. The generated SOFA file contains synthetic receiver geometry and filters for numerical tests.
 
 ## Native engine experiments
 
-The private engine probes accept an explicit directory containing compatible local HrtfApo/HrtfDspCpu files. They verify reviewed hashes before using private interfaces. AudioEng provider tests additionally require the reviewed AudioEng DLL. A current but different Windows build may fail that compatibility check; do not disable the pin and assume the same ABI.
+The private engine probes accept an explicit directory containing compatible local HrtfApo/HrtfDspCpu files. They verify reviewed hashes before using private interfaces. AudioEng provider tests additionally require the reviewed AudioEng DLL. If a DLL fails the compatibility check, use the reviewed build listed by the probe. The private interface can differ between Windows builds.
 
 The bootstrap's prepared container is an example-owned format, not a vendor file format. It contains `WSSSOFA1`, version/mode/dimensions and a SHA-256 payload digest. A mode-2 payload carries complete ear filters and Windows-coordinate direction vectors. The initializer prepares outside render callbacks. The digest detects corruption; it does not authenticate a publisher.
 

@@ -1,15 +1,15 @@
 # Windows Spatial Audio Research wiki
 
-This wiki is part of the repository so it is readable in a clone, a ZIP and GitHub's Markdown browser.
+Use this index to find a topic guide, a runnable example, or the evidence behind a result. The same pages are available in the repository and its source archives.
 
 ## Start here
 
 - [Research overview](../README.md)
-- [What works, what is unverified, and what is ruled out](../RESEARCH_STATUS.md)
+- [Research results and limits](../RESEARCH_STATUS.md)
+- [Run the examples](../examples/README.md)
 - [Reverse-engineering methods](../docs/methods/README.md)
 - [Research history](../docs/history.md)
 - [Detailed research archive](../docs/ARCHIVE_INDEX.md)
-- [Agent continuation guide](../agent-handoff.md)
 
 ## Topics
 
@@ -29,10 +29,9 @@ This wiki is part of the repository so it is readable in a clone, a ZIP and GitH
 
 ## Implementation and evidence
 
-- [Examples and requirements](../examples/README.md)
 - [Validation record](../VALIDATION.md)
 - [Source index](../docs/SOURCE_INDEX.json)
 - [Primary references](../docs/REFERENCES.md)
 - [Release changes](../CHANGELOG.md)
 
-The archived notes preserve technical depth and corrected mistakes. Their experimental claims are historical and scoped; the synthetic public examples have a separate fresh test record.
+Use the validation record for checks on the public examples. The archive records the original experiments and subsequent corrections.

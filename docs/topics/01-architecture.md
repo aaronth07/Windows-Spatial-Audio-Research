@@ -1,5 +1,7 @@
 # Windows audio architecture
 
+Use this guide to distinguish compressed-media decoding, object rendering, and endpoint processing. Each stage has access to a different part of the scene.
+
 ## The three different jobs
 
 A codec decoder turns a compressed bitstream into signals and, where supported, scene metadata. An object renderer accepts source PCM plus controls such as position and gain. A binaural renderer filters or spatializes those sources into two ear signals. A speaker renderer distributes them into output channels. These jobs may be implemented in the same product, but they are not interchangeable API contracts.

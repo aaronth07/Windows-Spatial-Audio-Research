@@ -1,5 +1,7 @@
 # Dolby profile storage and native loading
 
+This guide separates Dolby Access storage from native endpoint loading. Each route has its own evidence and compatibility limits.
+
 ## Consumer Access versus other products
 
 Consumer Dolby Access/Atmos for Headphones, professional Dolby Atmos Renderer, and Windows' native spatial frontend are distinct targets. A schema or parser from one does not establish the other's import contract. The research keeps consumer storage, endpoint property delivery, coefficient decoding and SOFA recovery as separate evidence tracks.
